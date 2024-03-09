@@ -1,0 +1,53 @@
+@model Mushni_assigns.Models.StudentResponse
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>StudentApplication</title>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body>
+<div class="container panel panel-success">
+    <div class="panel-heading text-center">
+        <h4>Student Application</h4>
+    </div>
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="StudentApplication" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group mb-3">
+                <label asp-for="Name">Your name:</label>
+                <input class="form-control" asp-for="Name"/>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Email">Your email:</label>
+                <input class="form-control" asp-for="Email"/>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Phone">Your phone:</label>
+                <input class="form-control" asp-for="Phone"/>
+            </div>
+            <div class="form-group mb-3">
+                <label>Choose faculty</label>
+                <select class="form-control" asp-for="Faculty">
+                    <option value="">Choose an option</option>
+                    <option value="IT">IT</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Match">Match</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">
+                    Submit Student Application
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

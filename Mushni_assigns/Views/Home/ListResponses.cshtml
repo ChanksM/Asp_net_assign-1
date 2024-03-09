@@ -1,0 +1,38 @@
+@model IEnumerable<Mushni_assigns.Models.StudentResponse>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Responses</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body>
+<div class="panel-body">
+    <h2 class="mb-3">Students Applications List</h2>
+    <table class="table table-sm table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Faculty</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (Mushni_assigns.Models.StudentResponse r in Model)
+        {
+            <tr>
+                <td>@r.Name</td>
+                <td>@r.Email</td>
+                <td>@r.Phone</td>
+                <td>@r.Faculty</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@model Mushni_assigns.Models.StudentResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Thanks</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body class="text-center">
+<h1>Thank you, @Model.Name!</h1>
+<p>Your faculty is - @Model.Faculty - good luck.</p>
+
+<p>
+    Click <a class="nav-link" asp-action="ListResponses">here</a>
+    to see students applications list
+</p>
+</body>
+</html>
